@@ -1331,12 +1331,39 @@ p {
   }
 
   .site-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px 12px;
     padding: 24px 6%;
-    flex-wrap: wrap;
+  }
+
+  .footer-brand {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .site-footer > p,
+  .footer-copy {
+    grid-column: 1 / -1;
+    line-height: 1.5;
   }
 
   .site-footer > p {
-    display: none;
+    display: block;
+    grid-row: 2;
+  }
+
+  .back-top {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    white-space: nowrap;
+  }
+
+  .footer-copy {
+    grid-row: 3;
   }
 }
 
