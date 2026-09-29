@@ -724,10 +724,44 @@ p {
 }
 
 .gallery-photo {
+  position: relative;
   height: 213px;
   margin: 0;
   overflow: hidden;
   background: var(--ink);
+}
+
+.gallery-more {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 0;
+  background: rgba(36, 23, 27, 0.68);
+  color: var(--paper);
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  transition: background 0.2s;
+}
+
+.gallery-more:hover,
+.gallery-more:focus-visible {
+  background: rgba(36, 23, 27, 0.84);
+}
+
+.gallery-more:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: -5px;
+}
+
+.gallery-more-count {
+  font: 700 54px / 1 var(--display);
+  letter-spacing: 0;
 }
 
 .gallery-photo-wide {

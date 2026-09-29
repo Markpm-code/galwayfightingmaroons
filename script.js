@@ -1,5 +1,8 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector("#site-nav");
+const galleryGrid = document.querySelector(".gallery-grid");
+const galleryMore = document.querySelector(".gallery-more");
+const extraGalleryPhotos = [...galleryGrid.querySelectorAll(".gallery-photo")].slice(3);
 
 menuToggle.addEventListener("click", () => {
   const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
@@ -15,5 +18,24 @@ siteNav.addEventListener("click", (event) => {
     siteNav.classList.remove("is-open");
   }
 });
+
+if (galleryMore) {
+  const photoCount = extraGalleryPhotos.length;
+  galleryMore.hidden = photoCount === 0;
+  galleryMore.querySelector(".gallery-more-count").textContent = `+${photoCount}`;
+  extraGalleryPhotos.forEach((photo) => {
+    photo.hidden = true;
+  });
+
+  galleryMore.addEventListener("click", () => {
+    const isExpanded = galleryMore.getAttribute("aria-expanded") === "true";
+    galleryMore.setAttribute("aria-expanded", String(!isExpanded));
+    galleryMore.querySelector(".gallery-more-count").textContent = isExpanded ? `+${photoCount}` : "−";
+    galleryMore.querySelector("span:last-child").textContent = isExpanded ? "MORE PHOTOS" : "SHOW FEWER";
+    extraGalleryPhotos.forEach((photo) => {
+      photo.hidden = isExpanded;
+    });
+  });
+}
 
 document.querySelector("#year").textContent = new Date().getFullYear();
