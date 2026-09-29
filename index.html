@@ -148,22 +148,19 @@
         </div>
         <div class="gallery-grid">
           <figure class="gallery-photo gallery-photo-wide">
-            <img
-              src="./assets/images/team-photo.jpg"
-              alt="Basketball team photo with players and coaches"
-            />
+            <button class="gallery-open" type="button">
+              <img src="./assets/images/team-photo.jpg" alt="Basketball team photo with players and coaches" />
+            </button>
           </figure>
           <figure class="gallery-photo">
-            <img
-              src="./assets/images/gfm-team-trophy.jpg"
-              alt="Basketball team holding a trophy"
-            />
+            <button class="gallery-open" type="button">
+              <img src="./assets/images/gfm-team-trophy.jpg" alt="Basketball team holding a trophy" />
+            </button>
           </figure>
           <figure class="gallery-photo">
-            <img
-              src="./assets/images/jumpball.jpg"
-              alt="Players sharing a basketball jump ball on the court"
-            />
+            <button class="gallery-open" type="button">
+              <img src="./assets/images/jumpball.jpg" alt="Players sharing a basketball jump ball on the court" />
+            </button>
             <button
               class="gallery-more"
               type="button"
@@ -174,18 +171,30 @@
             </button>
           </figure>
           <figure class="gallery-photo gallery-photo-wide">
-            <img
-              src="./assets/images/team-photo-cork.jpg"
-              alt="Basketball players huddled together on the court"
-            />
+            <button class="gallery-open" type="button">
+              <img src="./assets/images/team-photo-cork.jpg" alt="Basketball players huddled together on the court" />
+            </button>
           </figure>
           <figure class="gallery-photo gallery-photo-wide">
-            <img
-              src="./assets/images/the-teams.jpg"
-              alt="Basketball players huddled together on the court"
-            />
+            <button class="gallery-open" type="button">
+              <img src="./assets/images/the-teams.jpg" alt="Basketball players huddled together on the court" />
+            </button>
           </figure>
         </div>
+        <dialog class="gallery-viewer" aria-label="Photo viewer">
+          <div class="gallery-viewer-header">
+            <span class="gallery-viewer-count"></span>
+            <button class="gallery-viewer-close" type="button" aria-label="Close photo viewer">×</button>
+          </div>
+          <div class="gallery-viewer-stage">
+            <button class="gallery-viewer-nav" type="button" aria-label="Previous photo">‹</button>
+            <figure class="gallery-viewer-photo">
+              <img class="gallery-viewer-image" alt="" />
+              <figcaption class="gallery-viewer-caption"></figcaption>
+            </figure>
+            <button class="gallery-viewer-nav" type="button" aria-label="Next photo">›</button>
+          </div>
+        </dialog>
       </section>
 
       <section class="join" id="join">
