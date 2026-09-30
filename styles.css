@@ -1190,7 +1190,12 @@ p {
   }
 
   .event-card {
-    grid-template-columns: 38% 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .event-card img {
+    height: auto;
+    min-height: 0;
   }
 
   .event-card-content {
