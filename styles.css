@@ -72,7 +72,7 @@ button {
 }
 
 .brand-name {
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: 0.11em;
@@ -86,7 +86,7 @@ button {
 }
 
 .site-nav > a:not(.nav-cta) {
-  font-size: 11px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.72);
   transition: color 0.2s;
 }
