@@ -45,7 +45,7 @@ button {
   justify-content: space-between;
   background: var(--ink);
   color: var(--paper);
-  position: absolute;
+  position: fixed;
   inset: 0 0 auto;
   z-index: 5;
 }
