@@ -949,6 +949,27 @@ p {
   margin-bottom: 20px;
 }
 
+.join-facebook-link {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 4px 9px;
+  background: var(--gold);
+  color: var(--ink);
+  font-size: 0.9em;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+
+.join-facebook-link:hover {
+  background: var(--paper);
+}
+
+.join-facebook-link:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 3px;
+}
+
 .button-cream {
   background: var(--paper);
   color: var(--maroon-deep);
