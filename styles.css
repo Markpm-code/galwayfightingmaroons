@@ -43,7 +43,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--ink);
+  background: var(--maroon-deep);
   color: var(--paper);
   position: fixed;
   inset: 0 0 auto;
@@ -963,12 +963,13 @@ p {
 .site-footer {
   min-height: 110px;
   padding: 25px 6.1%;
-  background: var(--ink);
+  background: var(--maroon-deep);
   color: var(--paper);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  border-top: 4px solid var(--gold);
 }
 
 .footer-brand .brand-mark {
