@@ -1418,6 +1418,11 @@ p {
     padding: 24px 6%;
   }
 
+  .site-footer > p,
+  .footer-copy{
+    text-align: center;
+  }
+
   .footer-brand {
     grid-column: 1;
     grid-row: 1;
