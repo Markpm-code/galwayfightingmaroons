@@ -34,13 +34,8 @@ if (galleryMore) {
   });
 
   galleryMore.addEventListener("click", () => {
-    const isExpanded = galleryMore.getAttribute("aria-expanded") === "true";
-    galleryMore.setAttribute("aria-expanded", String(!isExpanded));
-    galleryMore.querySelector(".gallery-more-count").textContent = isExpanded ? `+${photoCount}` : "−";
-    galleryMore.querySelector("span:last-child").textContent = isExpanded ? "MORE PHOTOS" : "SHOW FEWER";
-    extraGalleryPhotos.forEach((photo) => {
-      photo.hidden = isExpanded;
-    });
+    showGalleryImage(galleryImages.length - photoCount);
+    galleryViewer.showModal();
   });
 }
 
