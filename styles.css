@@ -259,6 +259,7 @@ p {
   font-size: 22px;
   transition: background 0.2s, color 0.2s, transform 0.2s;
   flex: 0 0 auto;
+  margin-top: -14px;
 }
 
 .round-link:hover {
